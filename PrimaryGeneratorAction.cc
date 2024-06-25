@@ -32,7 +32,7 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-    // Define the range for random X and Y positions
+    // Define the particle bombarding area + offset
     G4double box_size = 31.5 * um;
     G4double x_center_shift = -1.5 * um;
     G4double y_center_shift = -1.5 * um;

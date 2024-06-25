@@ -12,6 +12,7 @@
 #include "G4Element.hh"
 #include "G4Tubs.hh"
 #include "G4ThreeVector.hh"
+#include "SensitiveDetector.hh"
 
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
@@ -21,6 +22,11 @@ public:
     virtual ~MyDetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct() override; // Explicitly mark as override
+
+private:
+    G4LogicalVolume *logicDetectorFront;
+    G4LogicalVolume *logicDetectorBack;
+
 };
 
 #endif // MY_PROJECT_CONSTRUCTION_HH
