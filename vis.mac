@@ -1,0 +1,20 @@
+/vis/open
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+/vis/scene/endOfRunAction accumulate
+/vis/geometry/set/visibility logicWorld 0 false
+/vis/geometry/set/visibility logicNanorod 1 true
+/vis/geometry/set/visibility logicCoverTube 1 true
+/vis/geometry/set/visibility logicCoverCap 1 true
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate 1000
+/tracking/verbose 1
+
+# Set the production cuts to see electrons
+/run/setCut 0.01 mm
+
+# Alternatively, set the cut specifically for electrons
+#/run/setCutForAGivenParticle e- 0.01 mm
+
+/run/initialize
