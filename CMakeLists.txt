@@ -10,6 +10,8 @@ add_executable(sim
     PrimaryGeneratorAction.cc
     action.cc
     physics.cc
+    Hit.cc
+    SensitiveDetector.cc
 )
 
 target_include_directories(sim PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
