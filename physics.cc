@@ -31,7 +31,7 @@ MyPhysicsList::~MyPhysicsList()
 
 void MyPhysicsList::SetCuts()
 {
-    G4double lowEnergyCut = 0.1 * CLHEP::um; // Use CLHEP::um for the unit
+    G4double lowEnergyCut = 0.01 * CLHEP::um; // Use CLHEP::um for the unit
     SetCutValue(lowEnergyCut, "gamma");
     SetCutValue(lowEnergyCut, "e-");
     SetCutValue(lowEnergyCut, "e+");
