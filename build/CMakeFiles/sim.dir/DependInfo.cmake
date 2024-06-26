@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.cc" "CMakeFiles/sim.dir/Hit.cc.o" "gcc" "CMakeFiles/sim.dir/Hit.cc.o.d"
   "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/PrimaryGeneratorAction.cc" "CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o" "gcc" "CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o.d"
+  "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.cc" "CMakeFiles/sim.dir/SensitiveDetector.cc.o" "gcc" "CMakeFiles/sim.dir/SensitiveDetector.cc.o.d"
   "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/action.cc" "CMakeFiles/sim.dir/action.cc.o" "gcc" "CMakeFiles/sim.dir/action.cc.o.d"
   "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/construction.cc" "CMakeFiles/sim.dir/construction.cc.o" "gcc" "CMakeFiles/sim.dir/construction.cc.o.d"
   "/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/physics.cc" "CMakeFiles/sim.dir/physics.cc.o" "gcc" "CMakeFiles/sim.dir/physics.cc.o.d"

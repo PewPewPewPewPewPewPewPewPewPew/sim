@@ -139,13 +139,43 @@ CMakeFiles/sim.dir/physics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/physics.cc.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/physics.cc -o CMakeFiles/sim.dir/physics.cc.s
 
+CMakeFiles/sim.dir/Hit.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/Hit.cc.o: /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.cc
+CMakeFiles/sim.dir/Hit.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim.dir/Hit.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/Hit.cc.o -MF CMakeFiles/sim.dir/Hit.cc.o.d -o CMakeFiles/sim.dir/Hit.cc.o -c /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.cc
+
+CMakeFiles/sim.dir/Hit.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/Hit.cc.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.cc > CMakeFiles/sim.dir/Hit.cc.i
+
+CMakeFiles/sim.dir/Hit.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/Hit.cc.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.cc -o CMakeFiles/sim.dir/Hit.cc.s
+
+CMakeFiles/sim.dir/SensitiveDetector.cc.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/SensitiveDetector.cc.o: /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.cc
+CMakeFiles/sim.dir/SensitiveDetector.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim.dir/SensitiveDetector.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/SensitiveDetector.cc.o -MF CMakeFiles/sim.dir/SensitiveDetector.cc.o.d -o CMakeFiles/sim.dir/SensitiveDetector.cc.o -c /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.cc
+
+CMakeFiles/sim.dir/SensitiveDetector.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim.dir/SensitiveDetector.cc.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.cc > CMakeFiles/sim.dir/SensitiveDetector.cc.i
+
+CMakeFiles/sim.dir/SensitiveDetector.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim.dir/SensitiveDetector.cc.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.cc -o CMakeFiles/sim.dir/SensitiveDetector.cc.s
+
 # Object files for target sim
 sim_OBJECTS = \
 "CMakeFiles/sim.dir/sim.cc.o" \
 "CMakeFiles/sim.dir/construction.cc.o" \
 "CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o" \
 "CMakeFiles/sim.dir/action.cc.o" \
-"CMakeFiles/sim.dir/physics.cc.o"
+"CMakeFiles/sim.dir/physics.cc.o" \
+"CMakeFiles/sim.dir/Hit.cc.o" \
+"CMakeFiles/sim.dir/SensitiveDetector.cc.o"
 
 # External object files for target sim
 sim_EXTERNAL_OBJECTS =
@@ -155,6 +185,8 @@ sim: CMakeFiles/sim.dir/construction.cc.o
 sim: CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o
 sim: CMakeFiles/sim.dir/action.cc.o
 sim: CMakeFiles/sim.dir/physics.cc.o
+sim: CMakeFiles/sim.dir/Hit.cc.o
+sim: CMakeFiles/sim.dir/SensitiveDetector.cc.o
 sim: CMakeFiles/sim.dir/build.make
 sim: /usr/local/lib/libG4Tree.dylib
 sim: /usr/local/lib/libG4FR.dylib
@@ -193,7 +225,7 @@ sim: /usr/local/lib/libG4global.dylib
 sim: /usr/local/lib/libG4clhep.dylib
 sim: /usr/local/lib/libG4ptl.2.3.3.dylib
 sim: CMakeFiles/sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

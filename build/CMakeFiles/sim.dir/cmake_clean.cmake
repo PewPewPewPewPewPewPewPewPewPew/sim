@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sim.dir/Hit.cc.o"
+  "CMakeFiles/sim.dir/Hit.cc.o.d"
   "CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o"
   "CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o.d"
+  "CMakeFiles/sim.dir/SensitiveDetector.cc.o"
+  "CMakeFiles/sim.dir/SensitiveDetector.cc.o.d"
   "CMakeFiles/sim.dir/action.cc.o"
   "CMakeFiles/sim.dir/action.cc.o.d"
   "CMakeFiles/sim.dir/construction.cc.o"

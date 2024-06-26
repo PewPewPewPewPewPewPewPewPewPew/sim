@@ -1021,54 +1021,17 @@ CMakeFiles/sim.dir/construction.cc.o: \
   /usr/local/include/Geant4/G4Pow.hh /usr/local/include/Geant4/G4Exp.hh \
   /usr/local/include/Geant4/G4Tubs.hh \
   /usr/local/include/Geant4/G4Tubs.icc \
-  /usr/local/include/Geant4/G4VisAttributes.hh \
-  /usr/local/include/Geant4/graphics_reps_defs.hh \
-  /usr/local/include/Geant4/G4Colour.hh \
-  /usr/local/include/Geant4/G4Color.hh \
-  /usr/local/include/Geant4/G4VisAttributes.icc \
-  /usr/local/include/Geant4/G4UserLimits.hh \
-  /usr/local/include/Geant4/G4UserLimits.icc \
-  /usr/local/include/Geant4/G4RunManager.hh \
-  /usr/local/include/Geant4/G4Event.hh \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/set \
-  /usr/local/include/Geant4/evtdefs.hh \
+  /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.hh \
+  /usr/local/include/Geant4/G4VSensitiveDetector.hh \
+  /usr/local/include/Geant4/G4CollectionNameVector.hh \
+  /usr/local/include/Geant4/G4HCofThisEvent.hh \
   /usr/local/include/Geant4/G4Allocator.hh \
   /usr/local/include/Geant4/G4AllocatorPool.hh \
-  /usr/local/include/Geant4/G4PrimaryVertex.hh \
-  /usr/local/include/Geant4/G4PrimaryParticle.hh \
-  /usr/local/include/Geant4/pwdefs.hh \
-  /usr/local/include/Geant4/G4HCofThisEvent.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
-  /usr/local/include/Geant4/G4DCofThisEvent.hh \
-  /usr/local/include/Geant4/G4VDigiCollection.hh \
-  /usr/local/include/Geant4/G4TrajectoryContainer.hh \
-  /usr/local/include/Geant4/G4VTrajectory.hh \
-  /usr/local/include/Geant4/G4VUserEventInformation.hh \
-  /usr/local/include/Geant4/G4Profiler.hh \
-  /usr/local/include/Geant4/G4Profiler.icc \
-  /usr/local/include/Geant4/PTL/Globals.hh \
-  /usr/local/include/Geant4/PTL/Types.hh \
-  /usr/local/include/Geant4/PTL/Utility.hh \
-  /usr/local/include/Geant4/G4EventManager.hh \
-  /usr/local/include/Geant4/G4StackManager.hh \
-  /usr/local/include/Geant4/G4UserStackingAction.hh \
-  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
-  /usr/local/include/Geant4/G4StackedTrack.hh \
-  /usr/local/include/Geant4/G4TrackStack.hh \
-  /usr/local/include/Geant4/G4SmartTrackStack.hh \
-  /usr/local/include/Geant4/G4SubEventTrackStack.hh \
-  /usr/local/include/Geant4/G4SubEvent.hh \
-  /usr/local/include/Geant4/G4Track.hh \
-  /usr/local/include/Geant4/trkdefs.hh \
-  /usr/local/include/Geant4/G4DynamicParticle.hh \
-  /usr/local/include/Geant4/G4ElectronOccupancy.hh \
-  /usr/local/include/Geant4/G4LorentzVector.hh \
-  /usr/local/include/Geant4/G4ParticleDefinition.hh \
-  /usr/local/include/Geant4/G4PDefManager.hh \
-  /usr/local/include/Geant4/G4ParticleDefinition.icc \
-  /usr/local/include/Geant4/G4ParticleMomentum.hh \
-  /usr/local/include/Geant4/G4DynamicParticle.icc \
-  /usr/local/include/Geant4/G4TrackStatus.hh \
+  /usr/local/include/Geant4/G4Step.hh \
+  /usr/local/include/Geant4/G4StepPoint.hh \
+  /usr/local/include/Geant4/G4SteppingControl.hh \
+  /usr/local/include/Geant4/G4StepStatus.hh \
   /usr/local/include/Geant4/G4TouchableHandle.hh \
   /usr/local/include/Geant4/G4VTouchable.hh \
   /usr/local/include/Geant4/G4TouchableHistory.hh \
@@ -1083,16 +1046,62 @@ CMakeFiles/sim.dir/construction.cc.o: \
   /usr/local/include/Geant4/G4NavigationHistory.icc \
   /usr/local/include/Geant4/G4TouchableHistory.icc \
   /usr/local/include/Geant4/G4ReferenceCountedHandle.hh \
+  /usr/local/include/Geant4/G4StepPoint.icc \
+  /usr/local/include/Geant4/G4TrackVector.hh \
+  /usr/local/include/Geant4/G4Profiler.hh \
+  /usr/local/include/Geant4/G4Profiler.icc \
+  /usr/local/include/Geant4/PTL/Globals.hh \
+  /usr/local/include/Geant4/PTL/Types.hh \
+  /usr/local/include/Geant4/PTL/Utility.hh \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/set \
+  /usr/local/include/Geant4/G4Step.icc \
+  /usr/local/include/Geant4/G4Track.hh \
+  /usr/local/include/Geant4/trkdefs.hh \
+  /usr/local/include/Geant4/G4DynamicParticle.hh \
+  /usr/local/include/Geant4/G4ElectronOccupancy.hh \
+  /usr/local/include/Geant4/pwdefs.hh \
+  /usr/local/include/Geant4/G4LorentzVector.hh \
+  /usr/local/include/Geant4/G4ParticleDefinition.hh \
+  /usr/local/include/Geant4/G4PDefManager.hh \
+  /usr/local/include/Geant4/G4ParticleDefinition.icc \
+  /usr/local/include/Geant4/G4ParticleMomentum.hh \
+  /usr/local/include/Geant4/G4DynamicParticle.icc \
+  /usr/local/include/Geant4/G4TrackStatus.hh \
   /usr/local/include/Geant4/G4VUserTrackInformation.hh \
   /usr/local/include/Geant4/G4PhysicsModelCatalog.hh \
   /usr/local/include/Geant4/G4Track.icc \
-  /usr/local/include/Geant4/G4Step.hh \
-  /usr/local/include/Geant4/G4StepPoint.hh \
-  /usr/local/include/Geant4/G4SteppingControl.hh \
-  /usr/local/include/Geant4/G4StepStatus.hh \
-  /usr/local/include/Geant4/G4StepPoint.icc \
-  /usr/local/include/Geant4/G4TrackVector.hh \
-  /usr/local/include/Geant4/G4Step.icc \
+  /usr/local/include/Geant4/G4VHit.hh \
+  /usr/local/include/Geant4/G4VReadOutGeometry.hh \
+  /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
+  /usr/local/include/Geant4/G4VSDFilter.hh \
+  /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.hh \
+  /usr/local/include/Geant4/G4THitsCollection.hh \
+  /usr/local/include/Geant4/G4VisAttributes.hh \
+  /usr/local/include/Geant4/graphics_reps_defs.hh \
+  /usr/local/include/Geant4/G4Colour.hh \
+  /usr/local/include/Geant4/G4Color.hh \
+  /usr/local/include/Geant4/G4VisAttributes.icc \
+  /usr/local/include/Geant4/G4UserLimits.hh \
+  /usr/local/include/Geant4/G4UserLimits.icc \
+  /usr/local/include/Geant4/G4RunManager.hh \
+  /usr/local/include/Geant4/G4Event.hh \
+  /usr/local/include/Geant4/evtdefs.hh \
+  /usr/local/include/Geant4/G4PrimaryVertex.hh \
+  /usr/local/include/Geant4/G4PrimaryParticle.hh \
+  /usr/local/include/Geant4/G4DCofThisEvent.hh \
+  /usr/local/include/Geant4/G4VDigiCollection.hh \
+  /usr/local/include/Geant4/G4TrajectoryContainer.hh \
+  /usr/local/include/Geant4/G4VTrajectory.hh \
+  /usr/local/include/Geant4/G4VUserEventInformation.hh \
+  /usr/local/include/Geant4/G4EventManager.hh \
+  /usr/local/include/Geant4/G4StackManager.hh \
+  /usr/local/include/Geant4/G4UserStackingAction.hh \
+  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
+  /usr/local/include/Geant4/G4StackedTrack.hh \
+  /usr/local/include/Geant4/G4TrackStack.hh \
+  /usr/local/include/Geant4/G4SmartTrackStack.hh \
+  /usr/local/include/Geant4/G4SubEventTrackStack.hh \
+  /usr/local/include/Geant4/G4SubEvent.hh \
   /usr/local/include/Geant4/G4PrimaryTransformer.hh \
   /usr/local/include/Geant4/G4ParticleTable.hh \
   /usr/local/include/Geant4/G4ParticleTableIterator.hh \
@@ -1200,4 +1209,7 @@ CMakeFiles/sim.dir/construction.cc.o: \
   /usr/local/include/Geant4/G4UserTrackingAction.hh \
   /usr/local/include/Geant4/G4RunManagerKernel.hh \
   /usr/local/include/Geant4/rundefs.hh \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/list
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/list \
+  /usr/local/include/Geant4/G4SDManager.hh \
+  /usr/local/include/Geant4/G4HCtable.hh \
+  /usr/local/include/Geant4/G4SDStructure.hh

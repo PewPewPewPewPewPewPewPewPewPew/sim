@@ -129,6 +129,30 @@ sim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/build
 .PHONY : sim/fast
 
+Hit.o: Hit.cc.o
+.PHONY : Hit.o
+
+# target to build an object file
+Hit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/Hit.cc.o
+.PHONY : Hit.cc.o
+
+Hit.i: Hit.cc.i
+.PHONY : Hit.i
+
+# target to preprocess a source file
+Hit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/Hit.cc.i
+.PHONY : Hit.cc.i
+
+Hit.s: Hit.cc.s
+.PHONY : Hit.s
+
+# target to generate assembly for a file
+Hit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/Hit.cc.s
+.PHONY : Hit.cc.s
+
 PrimaryGeneratorAction.o: PrimaryGeneratorAction.cc.o
 .PHONY : PrimaryGeneratorAction.o
 
@@ -152,6 +176,30 @@ PrimaryGeneratorAction.s: PrimaryGeneratorAction.cc.s
 PrimaryGeneratorAction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.s
 .PHONY : PrimaryGeneratorAction.cc.s
+
+SensitiveDetector.o: SensitiveDetector.cc.o
+.PHONY : SensitiveDetector.o
+
+# target to build an object file
+SensitiveDetector.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/SensitiveDetector.cc.o
+.PHONY : SensitiveDetector.cc.o
+
+SensitiveDetector.i: SensitiveDetector.cc.i
+.PHONY : SensitiveDetector.i
+
+# target to preprocess a source file
+SensitiveDetector.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/SensitiveDetector.cc.i
+.PHONY : SensitiveDetector.cc.i
+
+SensitiveDetector.s: SensitiveDetector.cc.s
+.PHONY : SensitiveDetector.s
+
+# target to generate assembly for a file
+SensitiveDetector.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/SensitiveDetector.cc.s
+.PHONY : SensitiveDetector.cc.s
 
 action.o: action.cc.o
 .PHONY : action.o
@@ -258,9 +306,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sim"
+	@echo "... Hit.o"
+	@echo "... Hit.i"
+	@echo "... Hit.s"
 	@echo "... PrimaryGeneratorAction.o"
 	@echo "... PrimaryGeneratorAction.i"
 	@echo "... PrimaryGeneratorAction.s"
+	@echo "... SensitiveDetector.o"
+	@echo "... SensitiveDetector.i"
+	@echo "... SensitiveDetector.s"
 	@echo "... action.o"
 	@echo "... action.i"
 	@echo "... action.s"

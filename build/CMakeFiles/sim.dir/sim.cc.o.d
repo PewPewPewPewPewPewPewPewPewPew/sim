@@ -1357,6 +1357,13 @@ CMakeFiles/sim.dir/sim.cc.o: \
   /usr/local/include/Geant4/G4NistElementBuilder.hh \
   /usr/local/include/Geant4/G4NistMaterialBuilder.hh \
   /usr/local/include/Geant4/G4Pow.hh /usr/local/include/Geant4/G4Exp.hh \
+  /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/SensitiveDetector.hh \
+  /usr/local/include/Geant4/G4VSensitiveDetector.hh \
+  /usr/local/include/Geant4/G4CollectionNameVector.hh \
+  /usr/local/include/Geant4/G4VReadOutGeometry.hh \
+  /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
+  /usr/local/include/Geant4/G4VSDFilter.hh \
+  /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/Hit.hh \
   /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim/physics.hh \
   /usr/local/include/Geant4/G4DecayPhysics.hh \
   /usr/local/include/Geant4/G4Decay.hh \
