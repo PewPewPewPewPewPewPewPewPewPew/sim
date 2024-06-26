@@ -2,30 +2,30 @@
 
 G4ThreadLocal G4Allocator<Hit>* HitAllocator = nullptr;
 
-Hit::Hit() : G4VHit(), fEdep(0.), fPos(G4ThreeVector()), fTime(0.), fTrackID(-1)
-{}
-
-Hit::~Hit()
-{}
-
-Hit::Hit(const Hit& hit) : G4VHit()
+Hit::Hit() : G4VHit(), edep(0.), pos(G4ThreeVector()), time(0.), trackID(-1), kineticEnergy(0.), momentum(G4ThreeVector()) {}
+Hit::~Hit() {}
+Hit::Hit(const Hit& right) : G4VHit()
 {
-    fEdep = hit.fEdep;
-    fPos = hit.fPos;
-    fTime = hit.fTime;
-    fTrackID = hit.fTrackID;
+    edep = right.edep;
+    pos = right.pos;
+    time = right.time;
+    trackID = right.trackID;
+    particleName = right.particleName;
+    kineticEnergy = right.kineticEnergy;
+    momentum = right.momentum;
 }
-
-const Hit& Hit::operator=(const Hit& hit)
+const Hit& Hit::operator=(const Hit& right)
 {
-    fEdep = hit.fEdep;
-    fPos = hit.fPos;
-    fTime = hit.fTime;
-    fTrackID = hit.fTrackID;
+    edep = right.edep;
+    pos = right.pos;
+    time = right.time;
+    trackID = right.trackID;
+    particleName = right.particleName;
+    kineticEnergy = right.kineticEnergy;
+    momentum = right.momentum;
     return *this;
 }
-
-int Hit::operator==(const Hit& hit) const
+int Hit::operator==(const Hit& right) const
 {
-    return (this == &hit) ? 1 : 0;
+    return (this == &right) ? 1 : 0;
 }

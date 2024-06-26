@@ -2,10 +2,10 @@
 #define SENSITIVEDETECTOR_HH
 
 #include "G4VSensitiveDetector.hh"
+#include "G4THitsCollection.hh"
 #include "G4Step.hh"
 #include "G4HCofThisEvent.hh"
 #include "G4TouchableHistory.hh"
-#include "G4Track.hh"
 #include "Hit.hh"
 
 class SensitiveDetector : public G4VSensitiveDetector
@@ -19,7 +19,7 @@ public:
     virtual void EndOfEvent(G4HCofThisEvent* hce) override;
 
 private:
-    HitsCollection* fHitsCollection;
+    G4THitsCollection<class Hit>* fHitsCollection;
 };
 
 #endif

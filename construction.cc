@@ -14,14 +14,17 @@
 #include "G4RunManager.hh"
 #include "G4SDManager.hh"
 
-
-MyDetectorConstruction::MyDetectorConstruction()
+// Constructor
+DetectorConstruction::DetectorConstruction()
+    : G4VUserDetectorConstruction(),
+      fLogicDetectorFront(nullptr),
+      fLogicDetectorBack(nullptr)
 {}
 
-MyDetectorConstruction::~MyDetectorConstruction()
-{}
+// Destructor
+DetectorConstruction::~DetectorConstruction() {}
 
-G4VPhysicalVolume* MyDetectorConstruction::Construct()
+G4VPhysicalVolume* DetectorConstruction::Construct()
 {
     G4NistManager* nist = G4NistManager::Instance();
 
@@ -137,42 +140,51 @@ G4VPhysicalVolume* MyDetectorConstruction::Construct()
     }
 
     // Position for the silicone box (centered in the world volume)
-    G4ThreeVector boxPosition = G4ThreeVector(-1.5 * um, -1.5 * um, arrayOffsetZ);
+    G4ThreeVector boxPosition = G4ThreeVector(-1.5 * um, -1.5 * um, -boxThickness);
     new G4PVPlacement(0, boxPosition, logicBox, "physBox", logicWorld, false, 0, true);
 
-    G4Material* detectorMat = worldMat;
+    G4Material* detectorMat = nist->FindOrBuildMaterial("G4_AIR");
 
     // Size of the detector box (same size as the side of the world)
-    G4double detectorThickness = 1 * nm; // Very thin
+    G4double detectorThickness = 1 * um; // Very thin
     G4double detectorSizeXY = 50 * um;   // Same as world size
 
     // Positions for the detectors
-    G4double zPositionFront = -24 * um; // Just outside the world on the front
-    G4double zPositionBack = 24 * um;   // Just outside the world on the back
+    G4double zPositionFront = -49 * um; // Just inside the world on the front
+    G4double zPositionBack = 49 * um;   // Just inside the world on the back
 
     // Create front detector volume
     G4Box* solidDetectorFront = new G4Box("solidDetectorFront", detectorSizeXY / 2, detectorSizeXY / 2, detectorThickness / 2);
-    logicDetectorFront = new G4LogicalVolume(solidDetectorFront, detectorMat, "logicDetectorFront");
-    new G4PVPlacement(0, G4ThreeVector(0., 0., zPositionFront), logicDetectorFront, "physDetectorFront", logicWorld, false, 0, true);
+    fLogicDetectorFront = new G4LogicalVolume(solidDetectorFront, detectorMat, "DetectorFrontLV");
+    new G4PVPlacement(0, G4ThreeVector(0., 0., zPositionFront), fLogicDetectorFront, "physDetectorFront", logicWorld, false, 0, true);
 
     // Create back detector volume
     G4Box* solidDetectorBack = new G4Box("solidDetectorBack", detectorSizeXY / 2, detectorSizeXY / 2, detectorThickness / 2);
-    logicDetectorBack = new G4LogicalVolume(solidDetectorBack, detectorMat, "logicDetectorBack");
-    new G4PVPlacement(0, G4ThreeVector(0., 0., zPositionBack), logicDetectorBack, "physDetectorBack", logicWorld, false, 0, true);
+    fLogicDetectorBack = new G4LogicalVolume(solidDetectorBack, detectorMat, "DetectorBackLV");
+    new G4PVPlacement(0, G4ThreeVector(0., 0., zPositionBack), fLogicDetectorBack, "physDetectorBack", logicWorld, false, 0, true);
 
     // Visualization attributes for detectors
     G4VisAttributes* detectorVisAttr = new G4VisAttributes(G4Colour(0.0, 1.0, 0.0)); // Green
     detectorVisAttr->SetVisibility(true);
-    logicDetectorFront->SetVisAttributes(detectorVisAttr);
-    logicDetectorBack->SetVisAttributes(detectorVisAttr);
-// Create and register sensitive detectors
+    fLogicDetectorFront->SetVisAttributes(detectorVisAttr);
+    fLogicDetectorBack->SetVisAttributes(detectorVisAttr);
+
+    return physWorld;
+}
+
+void DetectorConstruction::ConstructSDandField()
+{
+    // Create and register sensitive detectors
     G4SDManager* sdManager = G4SDManager::GetSDMpointer();
     SensitiveDetector* detector = new SensitiveDetector("SensitiveDetector");
     sdManager->AddNewDetector(detector);
 
     // Attach the sensitive detector to the logical volumes
-    logicDetectorFront->SetSensitiveDetector(detector);
-    logicDetectorBack->SetSensitiveDetector(detector);
+    if (fLogicDetectorFront) {
+        fLogicDetectorFront->SetSensitiveDetector(detector);
+    }
 
-    return physWorld;
+    if (fLogicDetectorBack) {
+        fLogicDetectorBack->SetSensitiveDetector(detector);
+    }
 }

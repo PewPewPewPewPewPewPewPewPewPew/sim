@@ -22,13 +22,13 @@ int main(int argc, char** argv)
     G4MTRunManager* runManager = new G4MTRunManager();
 
     // Set mandatory initialization classes
-    runManager->SetUserInitialization(new MyDetectorConstruction());
+    runManager->SetUserInitialization(new DetectorConstruction());
     runManager->SetUserInitialization(new MyPhysicsList());
     //runManager->SetUserInitialization(new FTFP_BERT);
 
     // Set user action initialization
     runManager->SetUserInitialization(new ActionInitialization());
-    runManager->SetVerboseLevel(2);
+    runManager->SetVerboseLevel(1);
 
     // Initialize visualization
     G4VisManager* visManager = new G4VisExecutive();
@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 
     // Set macro path and execute initialization macro if in interactive mode
     if (ui) {
-        UImanager->ApplyCommand("/control/macroPath /Users/geant4/Documents/GEANT/geant4-v11.2.1/sim");
+        UImanager->ApplyCommand("/control/macroPath /Users/vitaliikindrat/Documents/sim");
         UImanager->ApplyCommand("/control/execute vis.mac");
         ui->SessionStart();
         delete ui;
