@@ -2,57 +2,62 @@
 #define HIT_HH
 
 #include "G4VHit.hh"
-#include "G4THitsCollection.hh"
-#include "G4Allocator.hh"
 #include "G4ThreeVector.hh"
-#include "G4String.hh"
+#include "G4Allocator.hh"
+#include "G4THitsCollection.hh"
 
 class Hit : public G4VHit
 {
 public:
     Hit();
     virtual ~Hit();
-    Hit(const Hit&);
-    const Hit& operator=(const Hit&);
+    Hit(const Hit& right);
+    const Hit& operator=(const Hit& right);
+    int operator==(const Hit& right) const;
+
+    inline void* operator new(size_t);
+    inline void operator delete(void* hit);
 
     void SetEdep(G4double de) { edep = de; }
-    G4double GetEdep() const { return edep; }
-
-    void SetPos(const G4ThreeVector& pos) { position = pos; }
-    G4ThreeVector GetPos() const { return position; }
-
-    void SetTime(G4double time) { globalTime = time; }
-    G4double GetTime() const { return globalTime; }
-
+    void SetPos(G4ThreeVector xyz) { pos = xyz; }
+    void SetTime(G4double t) { time = t; }
     void SetTrackID(G4int id) { trackID = id; }
-    G4int GetTrackID() const { return trackID; }
-
-    void SetParticleName(G4String name) { particleName = name; }
-    G4String GetParticleName() const { return particleName; }
-
+    void SetParticleName(const G4String& name) { particleName = name; }
     void SetKineticEnergy(G4double ke) { kineticEnergy = ke; }
+    void SetMomentum(G4ThreeVector mom) { momentum = mom; }
+
+    G4double GetEdep() const { return edep; }
+    G4ThreeVector GetPos() const { return pos; }
+    G4double GetTime() const { return time; }
+    G4int GetTrackID() const { return trackID; }
+    G4String GetParticleName() const { return particleName; }
     G4double GetKineticEnergy() const { return kineticEnergy; }
-
-    void SetMomentum(const G4ThreeVector& mom) { momentum = mom; }
     G4ThreeVector GetMomentum() const { return momentum; }
-
-    void SetNextVolumeName(const G4String& name) { nextVolumeName = name; }
-    G4String GetNextVolumeName() const { return nextVolumeName; }
-
-    void Print() const;
 
 private:
     G4double edep;
-    G4ThreeVector position;
-    G4double globalTime;
+    G4ThreeVector pos;
+    G4double time;
     G4int trackID;
     G4String particleName;
     G4double kineticEnergy;
     G4ThreeVector momentum;
-    G4String nextVolumeName;
 };
 
 typedef G4THitsCollection<Hit> HitCollection;
+
 extern G4ThreadLocal G4Allocator<Hit>* HitAllocator;
+
+inline void* Hit::operator new(size_t)
+{
+    if (!HitAllocator)
+        HitAllocator = new G4Allocator<Hit>;
+    return (void*)HitAllocator->MallocSingle();
+}
+
+inline void Hit::operator delete(void* hit)
+{
+    HitAllocator->FreeSingle((Hit*)hit);
+}
 
 #endif

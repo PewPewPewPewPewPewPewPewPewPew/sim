@@ -7,7 +7,6 @@
 #include "G4HCofThisEvent.hh"
 #include "G4TouchableHistory.hh"
 #include "Hit.hh"
-#include "G4AnalysisManager.hh"
 
 class SensitiveDetector : public G4VSensitiveDetector
 {
@@ -21,8 +20,6 @@ public:
 
 private:
     G4THitsCollection<class Hit>* fHitsCollection;
-    std::vector<class Hit*> fProtonHits;  // Declare fProtonHits
-    std::vector<class Hit*> fElectronHits; // Declare fElectronHits
 };
 
 #endif
