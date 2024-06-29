@@ -43,6 +43,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     ZnO->AddElement(Zn, 1);
     ZnO->AddElement(O, 1);
 
+    //Vacuum
     G4Material* worldMat = nist->FindOrBuildMaterial("G4_Galactic");
 
     // Define silicon material
